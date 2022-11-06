@@ -4,6 +4,7 @@ const Blogs = require("../model/blog");
 const passport = require("passport")
 const jwt = require("jsonwebtoken")
 const blogRouter = express.Router();
+
 //TO GET ALL BLOG
 
 blogRouter.get("/",async (req,res)=> {
