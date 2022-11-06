@@ -26,6 +26,9 @@ blogRouter.get("/",async (req,res)=> {
        else{ 
          blog = await Blogs.find({state:"published"});
         }
+    //     blog.read_count += 1
+    //    await blog.save()
+
         res.status(200).json(blog);
     }
     catch(err){
@@ -38,7 +41,7 @@ blogRouter.get("/:id",async (req,res)=> {
      
     try {
         const { id }  = req.params
-     const blog = await Blogs.findById({_id:id, state:"published" })
+     const blog = await Blogs.findById({_id:id })
 
        blog.read_count += 1
        await blog.save()
