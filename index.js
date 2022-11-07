@@ -13,11 +13,11 @@ require("dotenv").config()
 const app = express();
 
 app.use(passport.initialize());
-require("../blog_api/authentication/passport")
+require("./authentication/passport")
 
 
 
-require("../blog_api/db").connectToMongoDB()
+require("./db").connectToMongoDB()
 
 
 
