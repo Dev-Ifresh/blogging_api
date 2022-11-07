@@ -4,8 +4,8 @@ const bodyParser = require("body-parser");
 const passport = require("passport");
 
 
-const authRouter = require("../blog_api/routes/auth")
-const blogRouter = require("../blog_api/routes/blogs")
+const authRouter = require("./routes/auth")
+const blogRouter = require("./routes/blogs")
 
 
 require("dotenv").config()
